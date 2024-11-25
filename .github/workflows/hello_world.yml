@@ -1,0 +1,14 @@
+name: hello world
+
+on: [push]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        
+      - name: hello_world action from custom_action_test repo
+        uses: ercion/custom_action_test@main
